@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1i-lT-ZeU">
-                                <rect key="frame" x="16" y="589" width="343" height="44"/>
+                                <rect key="frame" x="16" y="490" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="CDd-3q-xYi"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLB-N8-lwZ">
-                                <rect key="frame" x="16" y="286" width="343" height="95"/>
+                                <rect key="frame" x="-12" y="237" width="344" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="0i2-eA-jJy"/>
                                     <constraint firstAttribute="height" constant="95" id="zD4-2g-4ds"/>
@@ -49,25 +49,90 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlL-KT-0bg">
+                                <rect key="frame" x="16" y="424" width="288" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sQD-Lg-ifZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Perform">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.69635595029999997" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToCounterView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TBP-88-yjI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RLB-N8-lwZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7s8-K9-6zl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W1i-lT-ZeU" secondAttribute="bottom" constant="34" id="8TY-3S-ZGY"/>
                             <constraint firstAttribute="leadingMargin" secondItem="W1i-lT-ZeU" secondAttribute="leading" id="CCF-22-ja6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HlL-KT-0bg" secondAttribute="trailing" id="LGw-hB-KRv"/>
                             <constraint firstItem="RLB-N8-lwZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QGp-rU-fdG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HlL-KT-0bg" secondAttribute="leading" id="TpY-pa-g9H"/>
                             <constraint firstItem="W1i-lT-ZeU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UQu-pY-Bub"/>
                             <constraint firstItem="W1i-lT-ZeU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hDF-48-eEL"/>
+                            <constraint firstItem="W1i-lT-ZeU" firstAttribute="top" secondItem="HlL-KT-0bg" secondAttribute="bottom" constant="22" id="zKH-gV-uFu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fetchButton" destination="W1i-lT-ZeU" id="B9k-Gi-9tZ"/>
                         <outlet property="resultLabel" destination="RLB-N8-lwZ" id="uOk-JI-yWm"/>
+                        <segue destination="DNl-YH-qLL" kind="show" identifier="counterSegue" id="6DS-Zz-VOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="146"/>
+            <point key="canvasLocation" x="-568" y="-21"/>
+        </scene>
+        <!--Counter View Controller-->
+        <scene sceneID="1LA-ac-44X">
+            <objects>
+                <viewController id="DNl-YH-qLL" customClass="CounterViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mV5-OW-nl4"/>
+                        <viewControllerLayoutGuide type="bottom" id="RVh-QZ-TJa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="81E-qE-tWj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ash-Zw-x1S">
+                                <rect key="frame" x="16" y="504" width="288" height="44"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MHf-Ye-e48"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.69635595029999997" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchAPIAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxO-hQ-geC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="pPy-fd-R9l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ash-Zw-x1S" secondAttribute="trailing" id="ZOW-ne-oSC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ash-Zw-x1S" secondAttribute="leading" id="hjS-pZ-K5a"/>
+                            <constraint firstItem="RVh-QZ-TJa" firstAttribute="top" secondItem="ash-Zw-x1S" secondAttribute="bottom" constant="20" id="pvy-8I-4jk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J7h-c9-CQb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeX-R4-Hgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="25"/>
         </scene>
     </scenes>
 </document>
