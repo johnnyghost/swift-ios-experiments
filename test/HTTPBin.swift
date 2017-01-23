@@ -14,15 +14,19 @@ class HTTPBinService: NSObject {
   
   @discardableResult
   func get() -> Promise<NSDictionary> {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
     return Alamofire
       .request("https://httpbin.org/get")
       .responseJSON()
-      .then { result in
+      .then { result -> NSDictionary in
         return result as! NSDictionary
       }
       .catch { error in
         print(error)
-    }
+      }
+      .always {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+      }
     
   }
 }

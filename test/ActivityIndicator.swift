@@ -27,8 +27,6 @@ public class ActivityIndicator:NSObject {
     activityIndicator.hidesWhenStopped = true
     self.view.addSubview(activityIndicator)
     
-    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    
     activityIndicator.startAnimating()
   }
   
@@ -36,6 +34,5 @@ public class ActivityIndicator:NSObject {
   /// <#Description#>
   func hide() {
     activityIndicator.stopAnimating()
-    UIApplication.shared.isNetworkActivityIndicatorVisible = false
   }
 }
