@@ -7,26 +7,16 @@
 //
 
 import UIKit
-import Alamofire
 import PromiseKit
 
 class HTTPBinService: NSObject {
+  let request = Request()
   
-  @discardableResult
   func get() -> Promise<NSDictionary> {
-    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    return Alamofire
-      .request("https://httpbin.org/get")
-      .responseJSON()
+    return request
+      .makeRequest(url: "https://httpbin.org/get")
       .then { result -> NSDictionary in
         return result as! NSDictionary
       }
-      .catch { error in
-        print(error)
-      }
-      .always {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-      }
-    
   }
 }
