@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view, typically from a nib.
-//    activityIndicator = ActivityIndicator(self.view)
   }
   
   /// <#Description#>
@@ -41,8 +40,10 @@ class ViewController: UIViewController {
       .get()
       .then { response -> Void in
         self.resultLabel.text = (response.object(forKey: "url") as! String)
+      }
+      .always {
         self.hideLoading()
-    }
+      }
   }
 }
 
