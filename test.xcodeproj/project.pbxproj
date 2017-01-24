@@ -13,6 +13,9 @@
 		052F47B61E32B6B30076DA6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052F47B51E32B6B30076DA6F /* Assets.xcassets */; };
 		052F47B91E32B6B30076DA6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052F47B71E32B6B30076DA6F /* LaunchScreen.storyboard */; };
 		054256011E36703B00A9C472 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054256001E36703B00A9C472 /* CounterViewController.swift */; };
+		054B55FC1E3764E8002A5BB6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B55FB1E3764E8002A5BB6 /* AppState.swift */; };
+		054B55FF1E376529002A5BB6 /* counterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B55FE1E376529002A5BB6 /* counterActions.swift */; };
+		054B56021E37656E002A5BB6 /* counterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B56011E37656E002A5BB6 /* counterReducer.swift */; };
 		05B412EC1E35396E002D54AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B412EB1E35396E002D54AC /* UIViewController.swift */; };
 		05B412EF1E360BDC002D54AC /* HTTPBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B412EE1E360BDC002D54AC /* HTTPBin.swift */; };
 		05B412F21E362314002D54AC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B412F11E362314002D54AC /* Request.swift */; };
@@ -28,6 +31,9 @@
 		052F47B81E32B6B30076DA6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		052F47BA1E32B6B30076DA6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		054256001E36703B00A9C472 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		054B55FB1E3764E8002A5BB6 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		054B55FE1E376529002A5BB6 /* counterActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = counterActions.swift; sourceTree = "<group>"; };
+		054B56011E37656E002A5BB6 /* counterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = counterReducer.swift; sourceTree = "<group>"; };
 		05B412EB1E35396E002D54AC /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		05B412EE1E360BDC002D54AC /* HTTPBin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPBin.swift; sourceTree = "<group>"; };
 		05B412F11E362314002D54AC /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 		052F47AD1E32B6B30076DA6F /* test */ = {
 			isa = PBXGroup;
 			children = (
+				054B56001E376556002A5BB6 /* reducers */,
+				054B55FD1E376507002A5BB6 /* actions */,
+				054B55FA1E3764A2002A5BB6 /* state */,
 				054255FF1E36700E00A9C472 /* controllers */,
 				05B412F01E3622F3002D54AC /* utils */,
 				05B412ED1E360BC9002D54AC /* services */,
@@ -98,6 +107,30 @@
 				054256001E36703B00A9C472 /* CounterViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		054B55FA1E3764A2002A5BB6 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				054B55FB1E3764E8002A5BB6 /* AppState.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		054B55FD1E376507002A5BB6 /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				054B55FE1E376529002A5BB6 /* counterActions.swift */,
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
+		054B56001E376556002A5BB6 /* reducers */ = {
+			isa = PBXGroup;
+			children = (
+				054B56011E37656E002A5BB6 /* counterReducer.swift */,
+			);
+			path = reducers;
 			sourceTree = "<group>";
 		};
 		05B412EA1E35393F002D54AC /* expensions */ = {
@@ -256,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054B55FF1E376529002A5BB6 /* counterActions.swift in Sources */,
 				052F47B11E32B6B30076DA6F /* ViewController.swift in Sources */,
 				05B412EF1E360BDC002D54AC /* HTTPBin.swift in Sources */,
+				054B55FC1E3764E8002A5BB6 /* AppState.swift in Sources */,
+				054B56021E37656E002A5BB6 /* counterReducer.swift in Sources */,
 				05B412F21E362314002D54AC /* Request.swift in Sources */,
 				054256011E36703B00A9C472 /* CounterViewController.swift in Sources */,
 				05B412EC1E35396E002D54AC /* UIViewController.swift in Sources */,

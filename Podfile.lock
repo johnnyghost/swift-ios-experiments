@@ -4,15 +4,18 @@ PODS:
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
   - PromiseKit/CorePromise (4.1.3)
+  - ReSwift (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - PromiseKit/Alamofire (~> 4.0)
+  - ReSwift
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   PromiseKit: 56baec63efa89210c023260879435a5a6b3bff00
+  ReSwift: f0255f4b4f2dacd12c5d97d34d13fc5dad6d6371
 
-PODFILE CHECKSUM: 756fe964b7de76a536a8e06de59b4615c19f12e8
+PODFILE CHECKSUM: a50c3f533b51a14bae7987461a191f4f943ec07e
 
 COCOAPODS: 1.1.1

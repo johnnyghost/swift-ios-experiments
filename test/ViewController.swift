@@ -29,9 +29,7 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  @IBAction func goToCounterView(_ sender: Any) {
-    performSegue(withIdentifier: "counterSegue", sender: self)
-  }
+  
   
   /// <#Description#>
   ///

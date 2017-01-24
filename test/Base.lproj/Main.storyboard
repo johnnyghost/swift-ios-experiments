@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLB-N8-lwZ">
-                                <rect key="frame" x="-11.5" y="237" width="343" height="95"/>
+                                <rect key="frame" x="-11.5" y="236.5" width="343" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="0i2-eA-jJy"/>
                                     <constraint firstAttribute="height" constant="95" id="zD4-2g-4ds"/>
@@ -63,7 +63,7 @@
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.69635595029999997" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToCounterView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TBP-88-yjI"/>
+                                    <segue destination="DNl-YH-qLL" kind="show" id="Onz-1j-ULm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,7 +84,6 @@
                     <connections>
                         <outlet property="fetchButton" destination="W1i-lT-ZeU" id="B9k-Gi-9tZ"/>
                         <outlet property="resultLabel" destination="RLB-N8-lwZ" id="uOk-JI-yWm"/>
-                        <segue destination="DNl-YH-qLL" kind="show" identifier="counterSegue" id="6DS-Zz-VOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,9 +101,36 @@
                     <view key="view" contentMode="scaleToFill" id="81E-qE-tWj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eSt-cX-8YU">
+                                <rect key="frame" x="113" y="504" width="94" height="29"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="DNl-YH-qLL" eventType="valueChanged" id="K91-D6-zjr"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no8-1j-7QD">
+                                <rect key="frame" x="139" y="449.5" width="42" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eSt-cX-8YU" secondAttribute="trailing" constant="97" id="1hO-IM-fNP"/>
+                            <constraint firstItem="no8-1j-7QD" firstAttribute="leading" secondItem="81E-qE-tWj" secondAttribute="leadingMargin" constant="123" id="dMI-yO-OIp"/>
+                            <constraint firstItem="eSt-cX-8YU" firstAttribute="top" secondItem="no8-1j-7QD" secondAttribute="bottom" constant="31" id="gef-u4-2jc"/>
+                            <constraint firstItem="eSt-cX-8YU" firstAttribute="leading" secondItem="81E-qE-tWj" secondAttribute="leadingMargin" constant="97" id="kVD-mF-iw8"/>
+                            <constraint firstItem="RVh-QZ-TJa" firstAttribute="top" secondItem="eSt-cX-8YU" secondAttribute="bottom" constant="35" id="q8h-3J-IPl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="no8-1j-7QD" secondAttribute="trailing" constant="123" id="zoI-bc-aY8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J7h-c9-CQb"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="no8-1j-7QD" id="deS-Ov-lqJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WeX-R4-Hgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,4 +8,5 @@ target 'test' do
   # Pods for test
   pod 'Alamofire', '~> 4.3'
   pod 'PromiseKit/Alamofire', '~> 4.0'
+  pod 'ReSwift'
 end
