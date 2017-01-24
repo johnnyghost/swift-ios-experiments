@@ -130,6 +130,7 @@
                     <navigationItem key="navigationItem" id="J7h-c9-CQb"/>
                     <connections>
                         <outlet property="counterLabel" destination="no8-1j-7QD" id="deS-Ov-lqJ"/>
+                        <outlet property="stepper" destination="eSt-cX-8YU" id="Pur-Aq-SsJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WeX-R4-Hgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
