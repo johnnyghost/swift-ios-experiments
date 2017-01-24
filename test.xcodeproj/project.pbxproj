@@ -16,6 +16,8 @@
 		054B55FC1E3764E8002A5BB6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B55FB1E3764E8002A5BB6 /* AppState.swift */; };
 		054B55FF1E376529002A5BB6 /* counterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B55FE1E376529002A5BB6 /* counterActions.swift */; };
 		054B56021E37656E002A5BB6 /* counterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B56011E37656E002A5BB6 /* counterReducer.swift */; };
+		057A62B41E379084001D5733 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A62B31E379084001D5733 /* AppReducer.swift */; };
+		057A62B61E3793A0001D5733 /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057A62B51E3793A0001D5733 /* CounterState.swift */; };
 		05B412EC1E35396E002D54AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B412EB1E35396E002D54AC /* UIViewController.swift */; };
 		05B412EF1E360BDC002D54AC /* HTTPBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B412EE1E360BDC002D54AC /* HTTPBin.swift */; };
 		05B412F21E362314002D54AC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B412F11E362314002D54AC /* Request.swift */; };
@@ -34,6 +36,8 @@
 		054B55FB1E3764E8002A5BB6 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		054B55FE1E376529002A5BB6 /* counterActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = counterActions.swift; sourceTree = "<group>"; };
 		054B56011E37656E002A5BB6 /* counterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = counterReducer.swift; sourceTree = "<group>"; };
+		057A62B31E379084001D5733 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		057A62B51E3793A0001D5733 /* CounterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		05B412EB1E35396E002D54AC /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		05B412EE1E360BDC002D54AC /* HTTPBin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPBin.swift; sourceTree = "<group>"; };
 		05B412F11E362314002D54AC /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				054B55FB1E3764E8002A5BB6 /* AppState.swift */,
+				057A62B51E3793A0001D5733 /* CounterState.swift */,
 			);
 			path = state;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				054B56011E37656E002A5BB6 /* counterReducer.swift */,
+				057A62B31E379084001D5733 /* AppReducer.swift */,
 			);
 			path = reducers;
 			sourceTree = "<group>";
@@ -291,8 +297,10 @@
 			files = (
 				054B55FF1E376529002A5BB6 /* counterActions.swift in Sources */,
 				052F47B11E32B6B30076DA6F /* ViewController.swift in Sources */,
+				057A62B61E3793A0001D5733 /* CounterState.swift in Sources */,
 				05B412EF1E360BDC002D54AC /* HTTPBin.swift in Sources */,
 				054B55FC1E3764E8002A5BB6 /* AppState.swift in Sources */,
+				057A62B41E379084001D5733 /* AppReducer.swift in Sources */,
 				054B56021E37656E002A5BB6 /* counterReducer.swift in Sources */,
 				05B412F21E362314002D54AC /* Request.swift in Sources */,
 				054256011E36703B00A9C472 /* CounterViewController.swift in Sources */,
